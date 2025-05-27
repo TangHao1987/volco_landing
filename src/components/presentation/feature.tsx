@@ -1,84 +1,163 @@
 import React from "react";
-import { Typography } from "@material-tailwind/react";
+import TextAndImageSection from "./TextAndImageSection";
+import TitledGridSection from "./TitledGridSection";
+import { Typography, Card, CardBody } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
+import ImageWidget from "./ImageWidget";
+
+// Image component for "Dive into 29,000+ Words"
+const WordDiscoveryImages = () => (
+  <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mt-4">
+    <ImageWidget 
+      src="/astro-launch-ui/word_list_content_iphone.png" 
+      alt="Volco Main Lists Tab"
+      maxWidthClass="max-w-xs sm:max-w-sm"
+      maxHeightClass="max-h-[50vh]"
+      objectFitClass="object-contain"
+    />
+    <ImageWidget 
+      src="/astro-launch-ui/word_search_iphone.png" 
+      alt="Volco Search Results"
+      maxWidthClass="max-w-xs sm:max-w-sm"
+      maxHeightClass="max-h-[50vh]"
+      objectFitClass="object-contain"
+    />
+  </div>
+);
+
+// Updated to display three quiz images using ImageWidget
+const EngagingQuizzesImages = () => (
+  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 items-start mt-4">
+    <ImageWidget 
+      src="/astro-launch-ui/example_typingquiz.png"
+      alt="Example Typing Quiz"
+      maxWidthClass="w-full max-w-[200px] sm:max-w-full"
+      maxHeightClass="max-h-[50vh]"
+      objectFitClass="object-contain" 
+    />
+    <ImageWidget 
+      src="/astro-launch-ui/quiz_meaning_selection.png"
+      alt="Quiz Meaning Selection"
+      maxWidthClass="w-full max-w-[200px] sm:max-w-full"
+      maxHeightClass="max-h-[50vh]"
+      objectFitClass="object-contain"
+    />
+    <ImageWidget 
+      src="/astro-launch-ui/voice_block_quiz_2.png"
+      alt="Voice Block Quiz"
+      maxWidthClass="w-full max-w-[200px] sm:max-w-full"
+      maxHeightClass="max-h-[50vh]"
+      objectFitClass="object-contain"
+    />
+  </div>
+);
+
+// Image component for "Learn Anywhere, Anytime"
+const LearnAnywhereImage = () => (
+  <ImageWidget 
+    src="/astro-launch-ui/example_typingquiz.png" 
+    alt="Volco Quiz in Offline Mode - Typing Quiz"
+    maxWidthClass="max-w-xs sm:max-w-sm md:max-w-md"
+    objectFitClass="object-contain"
+  />
+);
+
+// Image component for "Stats Tracking"
+const StatsTrackingImage = () => (
+  <ImageWidget 
+    src="/astro-launch-ui/statistic.png" 
+    alt="Volco Stats Page"
+    maxWidthClass="max-w-xs sm:max-w-sm md:max-w-md"
+    objectFitClass="object-contain"
+  />
+);
+
+// Data for "How It Works" section grid
+const STATUS_ITEMS_DATA = [
+  {
+    title: "To Study Status",
+    description: "These are new words or words that are due for review. Volco identifies them as ready for your attention, based on your learning progress and the optimal review schedule.",
+    imgSrc: "https://placehold.co/100x100/E0E7FF/4338CA?text=To+Study+Icon", 
+    imgAlt: "To Study Icon"
+  },
+  {
+    title: "Learning Status",
+    description: "Words in this status are actively being learned. They require more frequent review to solidify your memory. Volco will bring them back at increasing intervals until mastered.",
+    imgSrc: "https://placehold.co/100x100/E0E7FF/4338CA?text=Learning+Icon", 
+    imgAlt: "Learning Icon"
+  },
+  {
+    title: "Known Status",
+    description: "Congratulations! These are words you\'ve successfully mastered and have a strong, long-term memory of. Volco will review them much less frequently to ensure retention.",
+    imgSrc: "https://placehold.co/100x100/E0E7FF/4338CA?text=Known+Icon", 
+    imgAlt: "Known Icon"
+  }
+];
+
+// Grid items for "How It Works" section
+const howItWorksGridItems = STATUS_ITEMS_DATA.map((item, index) => (
+  <Card key={index} shadow={false} className="p-6 bg-white rounded-lg shadow-md w-full max-w-xs sm:max-w-sm">
+    <CardBody className="text-center flex flex-col items-center h-full">
+      <Typography variant="h5" className="text-xl font-semibold text-slate-900 mb-3">
+        {item.title}
+      </Typography>
+      <Typography className="text-slate-700 text-sm mb-4 flex-grow">
+        {item.description}
+      </Typography>
+      <img src={item.imgSrc} alt={item.imgAlt} className="mx-auto mt-auto rounded-full w-20 h-20"/>
+    </CardBody>
+  </Card>
+));
+
+const howItWorksDescription = "Volco's intelligent Spaced Repetition System (SRS) automatically manages word status, moving them between \"To Study,\" \"Learning,\" and \"Known\" buckets. It schedules reviews at optimal times to ensure words stick in your long-term memory.";
 
 export function FeaturesPresentation() {
   return (
     <ThemeProvider>
-      {/* Section: Dive into 29,000+ Words */}
-      <section id="features" className="py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Typography variant="h2" className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 sm:mb-8">
-            Dive into 29,000+ Words, Ready to Learn.
-          </Typography>
-          <Typography className="text-lg sm:text-xl text-slate-600 mb-10 sm:mb-12 max-w-3xl mx-auto">
-            No need to create flashcards! Explore curated "Word Books" by category (like BEC, GMAT, TOEFL) or study words ranked by frequency. Finding and adding words is effortless.
-          </Typography>
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <img 
-              src="https://placehold.co/375x667/C7D2FE/4338CA?text=Main+Lists+Tab+(image4.jpg)" 
-              alt="Volco Main Lists Tab"
-              className="rounded-xl shadow-2xl mx-auto border-4 border-slate-200 max-w-xs sm:max-w-sm"
-            />
-            <img 
-              src="https://placehold.co/375x667/C7D2FE/4338CA?text=Search+Results+(image5.jpg)" 
-              alt="Volco Search Results"
-              className="rounded-xl shadow-2xl mx-auto border-4 border-slate-200 max-w-xs sm:max-w-sm"
-            />
-          </div>
-        </div>
-      </section>
+      <TextAndImageSection 
+        id="features" 
+        title="Dive into 29,000+ Words, Ready to Learn."
+        description='No need to create flashcards! Explore curated "Word Books" by category (like BEC, GMAT, TOEFL) or study words ranked by frequency. Finding and adding words is effortless.'
+        imageComponent={<WordDiscoveryImages />}
+        layoutStyle="stacked-text-top"
+        bgColor="bg-white"
+      />
 
-      {/* Section: Engaging Quizzes */}
-      <section className="py-16 md:py-24 bg-slate-100">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Typography variant="h2" className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 sm:mb-8">
-            Engaging Quizzes Tailored to Your Learning Style.
-          </Typography>
-          <Typography className="text-lg sm:text-xl text-slate-600 mb-10 sm:mb-12 max-w-3xl mx-auto">
-            Make learning fun and effective with multiple quiz formats like multiple-choice, typing challenges, and word block puzzles, all designed to reinforce your understanding.
-          </Typography>
-          <img 
-            src="https://placehold.co/600x400/DBEAFE/3730A3?text=Quiz+Types+Collage+(image6.jpg)" 
-            alt="Collage of Volco Quiz Types"
-            className="rounded-xl shadow-xl mx-auto max-w-2xl w-full border-4 border-slate-200"
-          />
-        </div>
-      </section>
+      <TitledGridSection 
+        id="how-it-works"
+        bgColor="bg-slate-100"
+        title="Powered by Science: Your Words, Intelligently Managed."
+        description={howItWorksDescription}
+        gridItems={howItWorksGridItems}
+        itemsPerRow={3}
+      />
 
-      {/* Section: Learn Anywhere, Anytime */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Typography variant="h2" className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 sm:mb-8">
-            Learn Anywhere, Anytime – Your Progress is Always Safe.
-          </Typography>
-          <Typography className="text-lg sm:text-xl text-slate-600 mb-10 sm:mb-12 max-w-3xl mx-auto">
-            Volco works seamlessly without an internet connection, perfect for commutes or travel. Plus, your vocabulary and progress are securely backed up to the cloud.
-          </Typography>
-          <img 
-            src="https://placehold.co/375x667/E0E7FF/4338CA?text=Fill-in-Blank+Quiz+with+Airplane+Mode"
-            alt="Volco Quiz in Offline Mode"
-            className="rounded-xl shadow-2xl mx-auto border-4 border-slate-200 max-w-xs sm:max-w-sm md:max-w-md"
-          />
-        </div>
-      </section>
+      <TextAndImageSection 
+        title="Engaging Quizzes Tailored to Your Learning Style."
+        description="Make learning fun and effective with multiple quiz formats like multiple-choice, typing challenges, and word block puzzles, all designed to reinforce your understanding."
+        imageComponent={<EngagingQuizzesImages />}
+        layoutStyle="stacked-text-top"
+        bgColor="bg-slate-100"
+      />
 
-      {/* Section: Stats Tracking */}
-      <section id="stats" className="py-16 md:py-24 bg-slate-100">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Typography variant="h2" className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 sm:mb-8">
-            See Your Vocabulary Grow with Clear Statistics.
-          </Typography>
-          <Typography className="text-lg sm:text-xl text-slate-600 mb-10 sm:mb-12 max-w-3xl mx-auto">
-            Volco provides insights on total study time, words mastered, study sessions, and learning streaks, helping you stay motivated and understand your learning journey.
-          </Typography>
-          <img 
-            src="https://placehold.co/375x667/DBEAFE/3730A3?text=Volco+Stats+Page+(image7.jpg)" 
-            alt="Volco Stats Page"
-            className="rounded-xl shadow-2xl mx-auto border-4 border-slate-200 max-w-xs sm:max-w-sm md:max-w-md"
-          />
-        </div>
-      </section>
+      <TextAndImageSection 
+        title="Learn Anywhere, Anytime – Your Progress is Always Safe."
+        description="Volco works seamlessly without an internet connection, perfect for commutes or travel. Plus, your vocabulary and progress are securely backed up to the cloud."
+        imageComponent={<LearnAnywhereImage />}
+        layoutStyle="side-by-side"
+        textOrder="image-first"
+        bgColor="bg-white"
+      />
+
+      <TextAndImageSection 
+        id="stats"
+        title="See Your Vocabulary Grow with Clear Statistics."
+        description="Volco provides insights on total study time, words mastered, study sessions, and learning streaks, helping you stay motivated and understand your learning journey."
+        imageComponent={<StatsTrackingImage />}
+        layoutStyle="side-by-side"
+        textOrder="text-first"
+        bgColor="bg-slate-100"
+      />
     </ThemeProvider>
   );
 }

@@ -1,8 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HeaderPresentation from "../components/presentation/header"
-import FeaturePresentation from "../components/presentation/feature"
-import HowVolcoWorks from "../components/presentation/HowVolcoWorks";
+import HeroPresentation from "../components/presentation/HeroPresentation"
+import ForgettingCurvePresentation from "../components/presentation/ForgettingCurvePresentation"
+import ProblemStatementPresentation from "../components/presentation/ProblemStatementPresentation"
+import FeaturesPresentation from "../components/presentation/feature"
 import DevFreePresentation from "../components/presentation/developerFree"
 import PalettePresentationFree from "../components/presentation/palette"
 import CodePresentation from "../components/presentation/code"
@@ -14,12 +16,10 @@ import PricingPresentation from "../components/presentation/pricing"
 <Layout title="Volco - Master Vocabulary for Life">
 	<main>
     <HeaderPresentation client:only="react" />
-    <FeaturePresentation client:only="react" />
-    <HowVolcoWorks client:only="react" />
-    <DevFreePresentation client:only="react" />
-    <PalettePresentationFree client:only="react" />
-    <CodePresentation client:only="react" />
-    <TrackYourTriumph client:only="react" />
+    <HeroPresentation client:only="react" />
+    <ForgettingCurvePresentation client:only="react" />
+    <ProblemStatementPresentation client:only="react" />
+    <FeaturesPresentation client:only="react" />
     <PricingPresentation client:only="react" />
   </main>
 </Layout>

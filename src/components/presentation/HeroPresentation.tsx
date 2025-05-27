@@ -1,54 +1,62 @@
 import React from "react";
-import { Typography, Button } from "@material-tailwind/react";
+// Button is no longer imported from @material-tailwind/react for HeroActions
+import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
+import ImageWidget from "./ImageWidget";
+import TextAndImageSection from "./TextAndImageSection";
+
+// New component for the action buttons
+const HeroActions = () => (
+  // Adjusted styling for spacing and responsiveness
+  <div className="mb-12 flex flex-col sm:flex-row gap-4 sm:gap-6">
+    <a 
+      href="#" // Placeholder link
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="w-auto h-auto focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800 rounded-lg transition-transform hover:scale-105"
+    >
+      <img 
+        src="/astro-launch-ui/download_on_the_app_store.svg" 
+        alt="Download on the App Store"
+        className="h-10 sm:h-12" // Adjusted height, width will scale proportionally
+      /> 
+    </a>
+    <a 
+      href="#" // Placeholder link
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="w-auto h-auto focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800 rounded-lg transition-transform hover:scale-105"
+    >
+      <img 
+        src="/astro-launch-ui/get_it_on_google_play.svg" 
+        alt="Get on Google Play"
+        className="h-10 sm:h-12" // Adjusted height
+      /> 
+    </a>
+  </div>
+);
+
+// New component for the Hero Image
+const HeroImage = () => (
+  <ImageWidget 
+    src="/astro-launch-ui/home.png" 
+    alt="Volco Main Dashboard UI" 
+    maxWidthClass="max-w-xs sm:max-w-sm md:max-w-md"
+  />
+);
 
 export function HeroPresentation() {
   return (
     <ThemeProvider>
-      <section id="hero" className="pt-20 pb-12 md:pt-32 md:pb-20 bg-gradient-to-br from-slate-50 to-indigo-100">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Typography 
-            variant="h1"
-            className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight"
-          >
-            Master Vocabulary for Life with <span className="text-indigo-600">Volco</span>.
-          </Typography>
-          <Typography className="text-lg sm:text-xl md:text-2xl text-slate-700 mb-10 max-w-3xl mx-auto">
-            The intelligent app that uses science to build your long-term memory for words.
-          </Typography>
-          <div className="mb-12 flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Button 
-              size="lg" 
-              className="cta-button w-full sm:w-auto group"
-              onClick={() => window.open("#", "_blank")} // Placeholder link
-            >
-              <img 
-                src="https://placehold.co/24x24/FFFFFF/FFFFFF?text=A" 
-                alt="App Store Icon" 
-                className="w-6 h-6 mr-2 filter invert group-hover:filter-none transition-all duration-300"
-              /> 
-              Download on the App Store
-            </Button>
-            <Button 
-              size="lg" 
-              className="cta-button w-full sm:w-auto group"
-              onClick={() => window.open("#", "_blank")} // Placeholder link
-            >
-              <img 
-                src="https://placehold.co/24x24/FFFFFF/FFFFFF?text=G" 
-                alt="Google Play Icon" 
-                className="w-6 h-6 mr-2 filter invert group-hover:filter-none transition-all duration-300"
-              /> 
-              Get on Google Play
-            </Button>
-          </div>
-          <img 
-            src="https://placehold.co/375x667/E0E7FF/4338CA?text=Volco+Dashboard+(image1.jpg)" 
-            alt="Volco Main Dashboard UI" 
-            className="rounded-xl shadow-2xl mx-auto border-4 border-slate-200 max-w-xs sm:max-w-sm md:max-w-md"
-          />
-        </div>
-      </section>
+      <TextAndImageSection
+        id="hero"
+        title={<>Master Vocabulary for Life with <span className="text-indigo-600">Volco</span>.</>}
+        description="The intelligent app that uses science to build your long-term memory for words."
+        actionsComponent={<HeroActions />}
+        imageComponent={<HeroImage />}
+        layoutStyle="side-by-side"
+        bgColor="bg-gradient-to-br from-slate-50 to-indigo-100"
+      />
     </ThemeProvider>
   );
 }

@@ -3,8 +3,6 @@ import React from "react";
 
 import {
   Typography,
-  Button,
-  // Card, CardBody, CardHeader are removed as they are not used for the CTA section
 } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
 
@@ -21,23 +19,31 @@ export function FinalCtaPresentation() {
           <Typography className="text-lg sm:text-xl text-indigo-200 mb-10 max-w-2xl mx-auto">
             Join thousands of learners who are already building their vocabulary for life with Volco's intelligent and effective system.
           </Typography>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Button 
-              size="lg"
-              className="cta-button bg-white text-indigo-700 hover:bg-indigo-50 focus:ring-indigo-500 focus:ring-offset-indigo-700 w-full sm:w-auto"
-              onClick={() => window.open("#", "_blank")} // Placeholder link
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
+            <a 
+              href="#" // Placeholder link
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-auto h-auto focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-700 rounded-lg transition-transform hover:scale-105"
             >
-              <img src="https://placehold.co/28x28/4338CA/4338CA?text=A" alt="App Store Icon" className="w-6 h-6 mr-3" />
-              Download on the App Store
-            </Button>
-            <Button 
-              size="lg"
-              className="cta-button bg-white text-indigo-700 hover:bg-indigo-50 focus:ring-indigo-500 focus:ring-offset-indigo-700 w-full sm:w-auto"
-              onClick={() => window.open("#", "_blank")} // Placeholder link
+              <img 
+                src="/astro-launch-ui/download_on_the_app_store.svg" 
+                alt="Download on the App Store"
+                className="h-10 sm:h-12" // Adjusted height
+              /> 
+            </a>
+            <a 
+              href="#" // Placeholder link
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-auto h-auto focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-700 rounded-lg transition-transform hover:scale-105"
             >
-              <img src="https://placehold.co/28x28/4338CA/4338CA?text=G" alt="Google Play Icon" className="w-6 h-6 mr-3" />
-              Get on Google Play
-            </Button>
+              <img 
+                src="/astro-launch-ui/get_it_on_google_play.svg" 
+                alt="Get on Google Play"
+                className="h-10 sm:h-12" // Adjusted height
+              /> 
+            </a>
           </div>
         </div>
       </section>
