@@ -1,179 +1,48 @@
-import React, { useEffect } from "react";
+import React from "react";
 // import Script from "next/script";
 
 import {
   Typography,
   Button,
-  Card,
-  CardBody,
-  CardHeader,
+  // Card, CardBody, CardHeader are removed as they are not used for the CTA section
 } from "@material-tailwind/react";
+import ThemeProvider from "../theme-provider";
 
-function PaddleLoader() {
-  useEffect(() => {
-    // Check if we are in the browser environment
-    if (typeof window !== 'undefined') {
-      const script = document.createElement('script');
-      script.src = 'https://cdn.paddle.com/paddle/paddle.js';
-      script.onload = () => {
-        // Access the Paddle global object from the script
-        window.Paddle.Setup({
-          vendor: Number(102023),
-        });
-      };
-      document.body.appendChild(script);
-    }
-  }, []);
+// Removed PaddleLoader and its useEffect hook
 
-  return null;
-}
-
-export function PricingSectionOne() {
+export function FinalCtaPresentation() {
   return (
-    <>
-    <PaddleLoader />
-      <section id="pricing" className="py-24 px-8">
-        <div className="container mx-auto text-center">
-          <Typography variant="h2" color="blue-gray" className="mb-4">
-            Pick the best plan for you
+    <ThemeProvider>
+      <section id="final-cta" className="py-20 md:py-32 bg-indigo-700 text-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Typography variant="h2" className="text-3xl sm:text-4xl font-bold mb-6">
+            Start Your Journey to Vocabulary Mastery Today.
           </Typography>
-          <Typography className="mb-8 font-normal !text-gray-500">
-            You have Free Unlimited Updates and Premium Support on each package.
+          <Typography className="text-lg sm:text-xl text-indigo-200 mb-10 max-w-2xl mx-auto">
+            Join thousands of learners who are already building their vocabulary for life with Volco's intelligent and effective system.
           </Typography>
-        </div>
-        <div className="mt-12">
-          <div className="container mx-auto md:flex justify-center gap-10">
-            <Card
-              color="transparent"
-              className="border border-blue-gray-100 w-full md:w-1/2 lg:w-1/4 mb-8 md:mb-0"
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <Button 
+              size="lg"
+              className="cta-button bg-white text-indigo-700 hover:bg-indigo-50 focus:ring-indigo-500 focus:ring-offset-indigo-700 w-full sm:w-auto"
+              onClick={() => window.open("#", "_blank")} // Placeholder link
             >
-              <CardHeader
-                floated={false}
-                shadow={false}
-                color="transparent"
-                className="!m-0 pt-6 text-center"
-              >
-                <Typography
-                  variant="h5"
-                  color="blue-gray"
-                  className="capitalize mb-2 text-center"
-                >
-                  Open Source
-                </Typography>
-
-                <Typography
-                  variant="h3"
-                  color="blue-gray"
-                  className="flex gap-1 justify-center"
-                >
-                  Free
-                </Typography>
-              </CardHeader>
-              <CardBody className="text-center">
-                <ul className="flex flex-col mb-8 px-5">
-                  <li className="flex items-center justify-center gap-3 border-b py-4 text-gray-700">
-                    <Typography variant="small" className="font-normal text-inherit">
-                      Documentation
-                    </Typography>
-                  </li>
-                  <li className="flex items-center justify-center gap-3 border-b py-4 text-gray-700">
-                    <Typography variant="small" className="font-normal text-inherit">
-                      20 Components
-                    </Typography>
-                  </li>
-                  <li className="flex items-center justify-center gap-3 border-b py-4 text-gray-700">
-                    <Typography variant="small" className="font-normal text-inherit">
-                      10 Blocks
-                    </Typography>
-                  </li>
-                  <li className="flex items-center justify-center gap-3 border-b py-4 text-gray-700">
-                    <Typography variant="small" className="font-normal text-inherit">
-                      3 Example Pages
-                    </Typography>
-                  </li>
-                </ul>
-                <a href="https://github.com/creativetimofficial/astro-launch-ui?ref=astroLaunch-UI-landing" target="_blank">
-                  <Button
-                    size="sm"
-                    variant="gradient"
-                    color="blue-gray"
-                    className="from-blue-gray-900 to-blue-gray-800"
-                  >
-                    Download
-                  </Button>
-                </a>
-              </CardBody>
-            </Card>
-
-            <Card
-              color="blue-gray"
-              className="bg-dark w-full md:w-1/2 lg:w-1/4">
-              <CardHeader
-                floated={false}
-                shadow={false}
-                color="transparent"
-                className="!m-0 pt-6 text-center"
-              >
-                <Typography
-                  variant="h5"
-                  color="white"
-                  className="capitalize mb-2 text-center"
-                >
-                  Pro Version
-                </Typography>
-
-                <Typography
-                  variant="h3"
-                  color="white"
-                  className="flex gap-1 justify-center"
-                >
-                  $99
-                </Typography>
-              </CardHeader>
-              <CardBody className="text-center">
-                <ul className="flex flex-col mb-8 px-5">
-                  <li
-                    className="flex items-center justify-center gap-3 border-b py-4 text-white border-white/30">
-                    <Typography variant="small" className="font-normal text-inherit">
-                      Documentation
-                    </Typography>
-                  </li>
-                  <li
-                    className="flex items-center justify-center gap-3 border-b py-4 text-white border-white/30">
-                    <Typography variant="small" className="font-normal text-inherit">
-                      140+ Components
-                    </Typography>
-                  </li>
-                  <li
-                    className="flex items-center justify-center gap-3 border-b py-4 text-white border-white/30">
-                    <Typography variant="small" className="font-normal text-inherit">
-                      30+ Blocks
-                    </Typography>
-                  </li>
-                  <li
-                    className="flex items-center justify-center gap-3 border-b py-4 text-white border-white/30">
-                    <Typography variant="small" className="font-normal text-inherit">
-                      10+ Example Pages
-                    </Typography>
-                  </li>
-                </ul>
-                <a href="#" onClick={() => { Paddle.Checkout.open ({ product: 847482 });} }>
-                  <Button
-                    id="847482"
-                    size="sm"
-                    variant="gradient"
-                    color="white"
-                  >
-                    Get Access
-                  </Button>
-                </a>
-              </CardBody>
-            </Card>
+              <img src="https://placehold.co/28x28/4338CA/4338CA?text=A" alt="App Store Icon" className="w-6 h-6 mr-3" />
+              Download on the App Store
+            </Button>
+            <Button 
+              size="lg"
+              className="cta-button bg-white text-indigo-700 hover:bg-indigo-50 focus:ring-indigo-500 focus:ring-offset-indigo-700 w-full sm:w-auto"
+              onClick={() => window.open("#", "_blank")} // Placeholder link
+            >
+              <img src="https://placehold.co/28x28/4338CA/4338CA?text=G" alt="Google Play Icon" className="w-6 h-6 mr-3" />
+              Get on Google Play
+            </Button>
           </div>
         </div>
       </section>
-    </>
+    </ThemeProvider>
   );
 }
 
-export default PricingSectionOne;
+export default FinalCtaPresentation;

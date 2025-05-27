@@ -16,29 +16,19 @@ export function CodePresentation() {
         <div className="container mx-auto grid items-center relative lg:grid-cols-2">
           <div className="text-center lg:text-left">
             <Typography
-              color="blue"
-              className="flex items-center justify-center lg:justify-start font-bold text-lg mb-5"
-            >
-              By developers, for entrepreneurs
-            </Typography>
-
-            <Typography
               variant="h2"
               color="blue-gray"
-              className="mb-8 leading-tight"
+              className="mb-8 leading-tight font-bold"
             >
-              Don't write from scratch. Coded examples are included.
+              Learn Anywhere, Anytime – Your Progress is Always Safe.
             </Typography>
             <Typography color="blue-gray" className="lg:pr-20">
-              Using our ecommerce starter template will save a lot of coding time , as it provides a solid foundation for the Online Store, allowing your team to focus on customizing and adding specific features to meet the needs of your particular project.
+              Explain that Volco works seamlessly without an internet connection, perfect for commutes or travel. Reassure users that their vocabulary and progress are securely backed up to the cloud and synced across devices.
             </Typography>
-            <a href="https://www.creative-tim.com/learning-lab/astro/overview/astro-launch-ui">
-              <Button color="dark" variant="text" size="sm" className="flex items-center mx-auto md:mr-auto lg:ml-0 gap-2 mt-4">
-                Documentation <ArrowRightIcon strokeWidth={2} className="h-5 w-5" />
-              </Button>
-            </a>
           </div>
-            <img src="code.png" alt="iphone" className="max-w-2xl rounded-3xl hidden md:flex mx-auto" />
+          <div className="flex justify-center mt-8 lg:mt-0">
+            <img src="placeholder-screenshot7-offline.png" alt="Volco Offline Mode - Fill-in-the-Blank Quiz" className="max-w-md rounded-3xl shadow-lg mx-auto" />
+          </div>
         </div>
       </div>
     </ThemeProvider>

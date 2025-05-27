@@ -10,26 +10,24 @@ export function DevPresentation() {
     <ThemeProvider>
       <div className="h-full w-screen place-items-center bg-white py-20">
         <div className="container mx-auto grid items-center relative lg:grid-cols-2">
-          <div className="mb-8">
-            <Typography
-              color="blue"
-              className="flex items-center font-bold text-lg mb-5"
-            >
-              Attention to hiqh-quality code
-            </Typography>
-
+          <div className="mb-8 text-center lg:text-left">
             <Typography
               variant="h2"
               color="blue-gray"
-              className="mb-4 leading-tight"
+              className="mb-4 leading-tight font-bold"
             >
-              Develop consistenly using Astro architecture principles
+              Dive into 29,000+ Words, Ready to Learn.
             </Typography>
-            <Typography color="blue-gray" className="lg:pr-32">
-              Using AstroLaunch UI you get everything you need to start creating your fully functional and responsive Ecommerce website in days, not months.
+            <Typography color="blue-gray" className="lg:pr-32 mb-8">
+              Emphasize that users don't need to create flashcards. Highlight the curated "Word Books" (by category like BEC, GMAT, TOEFL) and the ability to study words ranked by frequency.
             </Typography>
+            <div className="mb-8">
+                <img src="placeholder-screenshot4.png" alt="Volco Main Lists Tab" className="mx-auto lg:mx-0 w-full md:w-2/3 shadow-lg rounded-lg" />
+            </div>
           </div>
-          <img src="consistenly.png" alt="components" className="mx-auto hidden md:flex" />
+          <div className="flex justify-center">
+            <img src="placeholder-screenshot5.png" alt="Volco Word Search Results" className="mx-auto w-full md:w-2/3 shadow-lg rounded-lg" />
+          </div>
         </div>
       </div>
     </ThemeProvider>
