@@ -114,15 +114,6 @@ const howItWorksDescription = "Volco's intelligent Spaced Repetition System (SRS
 export function FeaturesPresentation() {
   return (
     <ThemeProvider>
-      <TextAndImageSection 
-        id="features" 
-        title="Dive into 29,000+ Words, Ready to Learn."
-        description='No need to create flashcards! Explore curated "Word Books" by category (like BEC, GMAT, TOEFL) or study words ranked by frequency. Finding and adding words is effortless.'
-        imageComponent={<WordDiscoveryImages />}
-        layoutStyle="stacked-text-top"
-        bgColor="bg-white"
-      />
-
       <TitledGridSection 
         id="how-it-works"
         bgColor="bg-slate-100"
@@ -131,6 +122,16 @@ export function FeaturesPresentation() {
         gridItems={howItWorksGridItems}
         itemsPerRow={3}
       />
+
+      <TextAndImageSection 
+        id="features" 
+        title="Dive into 29,000+ Words, Ready to Learn."
+        description='No need to create flashcards! Explore curated "Word Books" by category (like BEC, GMAT, TOEFL) or study words ranked by frequency. Finding and adding words is effortless.'
+        imageComponent={<WordDiscoveryImages />}
+        layoutStyle="stacked-text-top"
+        bgColor="bg-[#42A5F520]"
+      />
+
 
       <TextAndImageSection 
         title="Engaging Quizzes Tailored to Your Learning Style."
@@ -146,7 +147,7 @@ export function FeaturesPresentation() {
         imageComponent={<LearnAnywhereImage />}
         layoutStyle="side-by-side"
         textOrder="image-first"
-        bgColor="bg-white"
+        bgColor="bg-[#42A5F520]"
       />
 
       <TextAndImageSection 

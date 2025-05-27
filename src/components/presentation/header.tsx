@@ -8,7 +8,7 @@ import ThemeProvider from "../theme-provider";
 
 // Define the navigation links data
 const NAV_LINKS = [
-  { label: "Why Volco?", href: "#problem" },
+  { label: "Why Volco?", href: "#forgetting-curve" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Features", href: "#features" },
   { label: "Progress", href: "#stats" },
@@ -19,6 +19,19 @@ export function HeaderPresentation() {
   const [isScrolling, setIsScrolling] = useState(false);
 
   const toggleOpen = () => setOpen((cur) => !cur);
+
+  // Function to handle smooth scrolling for navigation links
+  const handleNavClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string, callback?: () => void) => {
+    event.preventDefault(); // Prevent default anchor behavior
+    const targetId = href.substring(1); // Remove # from href
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (callback) {
+      callback(); // Call the callback if provided (e.g., toggleOpen for mobile menu)
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,6 +62,7 @@ export function HeaderPresentation() {
                 href="#hero"
                 variant="h4"
                 className="font-bold text-indigo-600 cursor-pointer"
+                onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleNavClick(e, "#hero")}
               >
                 Volco
               </Typography>
@@ -61,6 +75,7 @@ export function HeaderPresentation() {
                   href={link.href}
                   variant="small"
                   className="font-medium text-slate-700 hover:text-indigo-600 transition-colors px-3 py-2 rounded-md"
+                  onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleNavClick(e, link.href)}
                 >
                   {link.label}
                 </Typography>
@@ -108,7 +123,7 @@ export function HeaderPresentation() {
                 href={link.href}
                 variant="small"
                 className="block font-medium text-slate-700 hover:text-indigo-600 transition-colors px-3 py-2 rounded-md hover:bg-slate-100"
-                onClick={toggleOpen} 
+                onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleNavClick(e, link.href, toggleOpen)}
               >
                 {link.label}
               </Typography>

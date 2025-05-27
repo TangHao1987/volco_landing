@@ -55,7 +55,7 @@ export function HeroPresentation() {
         actionsComponent={<HeroActions />}
         imageComponent={<HeroImage />}
         layoutStyle="side-by-side"
-        bgColor="bg-gradient-to-br from-slate-50 to-indigo-100"
+        bgColor="bg-gradient-to-br from-[#42A5F566] to-[#AB47BC66]"
       />
     </ThemeProvider>
   );

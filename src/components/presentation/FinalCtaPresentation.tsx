@@ -11,12 +11,12 @@ import ThemeProvider from "../theme-provider";
 export function FinalCtaPresentation() {
   return (
     <ThemeProvider>
-      <section id="final-cta" className="py-20 md:py-32 bg-indigo-700 text-white">
+      <section id="final-cta" className="py-20 md:py-32 bg-gradient-to-br from-[#42A5F566] to-[#AB47BC66]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Typography variant="h2" className="text-3xl sm:text-4xl font-bold mb-6">
             Start Your Journey to Vocabulary Mastery Today.
           </Typography>
-          <Typography className="text-lg sm:text-xl text-indigo-200 mb-10 max-w-2xl mx-auto">
+          <Typography className="text-lg sm:text-xl mb-10 max-w-2xl mx-auto">
             Join thousands of learners who are already building their vocabulary for life with Volco's intelligent and effective system.
           </Typography>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
