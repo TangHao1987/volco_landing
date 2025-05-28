@@ -1,8 +1,8 @@
 {
-  "name": "astro-launch-ui",
+  "name": "volcosrs",
   "version": "1.0.0",
   "description": "The ultimate starter template for your startup web project",
-  "main": "assets/js/astro-launch-ui.min.js",
+  "main": "assets/js/volcosrs.min.js",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -28,7 +28,7 @@
     "Astro template",
     "Astro store template"
   ],
-  "author": "Creative Tim <hello@creative-tim.com> (https://www.creative-tim.com/)",
+  "author": "TH",
   "license": "MIT",
   "dependencies": {
     "@astrojs/react": "^4.2.2",
@@ -46,13 +46,5 @@
   "devDependencies": {
     "@types/next": "^9.0.0",
     "sass": "^1.55.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/creativetimofficial/astro-launch-ui.git"
-  },
-  "bugs": {
-    "url": "https://github.com/creativetimofficial/issues"
-  },
-  "homepage": "https://www.creative-tim.com/astro/launch-ui/"
+  }
 }

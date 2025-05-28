@@ -1,6 +1,6 @@
 # Welcome to [Astro Launch UI](https://www.creative-tim.com/astro/launch-ui/)
 
-![version](https://img.shields.io/badge/version-1.0.1-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/astro-launch-ui.svg?maxAge=2592000)](https://github.com/creativetimofficial/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/astro-launch-ui.svg?maxAge=2592000)](https://github.com/creativetimofficial/issues?q=is%3Aissue+is%3Aclosed)
+![version](https://img.shields.io/badge/version-1.0.1-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/volcosrs.svg?maxAge=2592000)](https://github.com/creativetimofficial/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/volcosrs.svg?maxAge=2592000)](https://github.com/creativetimofficial/issues?q=is%3Aissue+is%3Aclosed)
 
 ![basics](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/astro/astrolaunch-ui-free.jpg)
 
@@ -38,7 +38,7 @@ Inside of your Astro project, you'll see the following folders and files:
 │   │   ├── input.css
 │   │   └── material-tailwind.css
 │   ├── js
-│   │   └── astro-launch-ui.min.js
+│   │   └── volcosrs.min.js
 │   └── scss
 │       └── loading-dot.css
 ├── astro.config.mjs
@@ -96,4 +96,4 @@ Instagram: <https://instagram.com/creativetimofficial>
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://www.creative-tim.com/learning-lab/astro/overview/astro-launch-ui) or jump into our [Discord server](https://discord.com/invite/TGZqBvZB).
+Feel free to check [our documentation](https://www.creative-tim.com/learning-lab/astro/overview/volcosrs) or jump into our [Discord server](https://discord.com/invite/TGZqBvZB).
