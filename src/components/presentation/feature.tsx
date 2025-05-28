@@ -77,20 +77,14 @@ const STATUS_ITEMS_DATA = [
   {
     title: "To Study Status",
     description: "These are new words or words that are due for review. Volco identifies them as ready for your attention, based on your learning progress and the optimal review schedule.",
-    imgSrc: "https://placehold.co/100x100/E0E7FF/4338CA?text=To+Study+Icon", 
-    imgAlt: "To Study Icon"
   },
   {
     title: "Learning Status",
     description: "Words in this status are actively being learned. They require more frequent review to solidify your memory. Volco will bring them back at increasing intervals until mastered.",
-    imgSrc: "https://placehold.co/100x100/E0E7FF/4338CA?text=Learning+Icon", 
-    imgAlt: "Learning Icon"
   },
   {
     title: "Known Status",
     description: "Congratulations! These are words you\'ve successfully mastered and have a strong, long-term memory of. Volco will review them much less frequently to ensure retention.",
-    imgSrc: "https://placehold.co/100x100/E0E7FF/4338CA?text=Known+Icon", 
-    imgAlt: "Known Icon"
   }
 ];
 
@@ -104,7 +98,7 @@ const howItWorksGridItems = STATUS_ITEMS_DATA.map((item, index) => (
       <Typography className="text-slate-700 text-sm mb-4 flex-grow">
         {item.description}
       </Typography>
-      <img src={item.imgSrc} alt={item.imgAlt} className="mx-auto mt-auto rounded-full w-20 h-20"/>
+      {item.imgSrc && <img src={item.imgSrc} alt={item.imgAlt} className="mx-auto mt-auto rounded-full w-20 h-20"/>}
     </CardBody>
   </Card>
 ));
