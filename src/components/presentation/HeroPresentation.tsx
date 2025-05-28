@@ -16,7 +16,7 @@ const HeroActions = () => (
       className="w-auto h-auto focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800 rounded-lg transition-transform hover:scale-105"
     >
       <img 
-        src="/astro-launch-ui/download_on_the_app_store.svg" 
+        src="/download_on_the_app_store.svg" 
         alt="Download on the App Store"
         className="h-10 sm:h-12" // Adjusted height, width will scale proportionally
       /> 
@@ -28,7 +28,7 @@ const HeroActions = () => (
       className="w-auto h-auto focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800 rounded-lg transition-transform hover:scale-105"
     >
       <img 
-        src="/astro-launch-ui/get_it_on_google_play.svg" 
+        src="/get_it_on_google_play.svg" 
         alt="Get on Google Play"
         className="h-10 sm:h-12" // Adjusted height
       /> 
@@ -39,7 +39,7 @@ const HeroActions = () => (
 // New component for the Hero Image
 const HeroImage = () => (
   <ImageWidget 
-    src="/astro-launch-ui/home.png" 
+    src="/home.png" 
     alt="Volco Main Dashboard UI" 
     maxWidthClass="max-w-xs sm:max-w-sm md:max-w-md"
   />

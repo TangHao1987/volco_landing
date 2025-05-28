@@ -5,7 +5,7 @@ import ThemeProvider from "../theme-provider";
 
 const ForgettingCurveImage = ({ maxHeightClass }: { maxHeightClass?: string }) => (
   <ImageWidget 
-    src="/astro-launch-ui/forgetting-curve.png"
+    src="/forgetting-curve.png"
     alt="Ebbinghaus Forgetting Curve" 
     maxWidthClass="max-w-lg" // Adjust as needed, e.g., max-w-md, max-w-lg
     maxHeightClass={maxHeightClass} // Will be overridden by TextAndImageSection in stacked layout

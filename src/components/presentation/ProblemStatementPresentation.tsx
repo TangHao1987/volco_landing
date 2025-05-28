@@ -8,7 +8,7 @@ interface ProblemImageProps {
 
 const ProblemImage = ({ maxHeightClass }: ProblemImageProps) => (
   <ImageWidget 
-    src="/astro-launch-ui/result_page.png"
+    src="/result_page.png"
     alt="Forgetting Curve Graphic Substitute - Quiz Result Page" 
     maxWidthClass="w-full"
     maxHeightClass={maxHeightClass}

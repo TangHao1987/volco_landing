@@ -9,14 +9,14 @@ import ImageWidget from "./ImageWidget";
 const WordDiscoveryImages = () => (
   <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mt-4">
     <ImageWidget 
-      src="/astro-launch-ui/word_list_content_iphone.png" 
+      src="/word_list_content_iphone.png" 
       alt="Volco Main Lists Tab"
       maxWidthClass="max-w-xs sm:max-w-sm"
       maxHeightClass="max-h-[50vh]"
       objectFitClass="object-contain"
     />
     <ImageWidget 
-      src="/astro-launch-ui/word_search_iphone.png" 
+      src="/word_search_iphone.png" 
       alt="Volco Search Results"
       maxWidthClass="max-w-xs sm:max-w-sm"
       maxHeightClass="max-h-[50vh]"
@@ -29,21 +29,21 @@ const WordDiscoveryImages = () => (
 const EngagingQuizzesImages = () => (
   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 items-start mt-4">
     <ImageWidget 
-      src="/astro-launch-ui/example_typingquiz.png"
+      src="/example_typingquiz.png"
       alt="Example Typing Quiz"
       maxWidthClass="w-full max-w-[200px] sm:max-w-full"
       maxHeightClass="max-h-[50vh]"
       objectFitClass="object-contain" 
     />
     <ImageWidget 
-      src="/astro-launch-ui/quiz_meaning_selection.png"
+      src="/quiz_meaning_selection.png"
       alt="Quiz Meaning Selection"
       maxWidthClass="w-full max-w-[200px] sm:max-w-full"
       maxHeightClass="max-h-[50vh]"
       objectFitClass="object-contain"
     />
     <ImageWidget 
-      src="/astro-launch-ui/voice_block_quiz_2.png"
+      src="/voice_block_quiz_2.png"
       alt="Voice Block Quiz"
       maxWidthClass="w-full max-w-[200px] sm:max-w-full"
       maxHeightClass="max-h-[50vh]"
@@ -55,7 +55,7 @@ const EngagingQuizzesImages = () => (
 // Image component for "Learn Anywhere, Anytime"
 const LearnAnywhereImage = () => (
   <ImageWidget 
-    src="/astro-launch-ui/example_typingquiz.png" 
+    src="/example_typingquiz.png" 
     alt="Volco Quiz in Offline Mode - Typing Quiz"
     maxWidthClass="max-w-xs sm:max-w-sm md:max-w-md"
     objectFitClass="object-contain"
@@ -65,7 +65,7 @@ const LearnAnywhereImage = () => (
 // Image component for "Stats Tracking"
 const StatsTrackingImage = () => (
   <ImageWidget 
-    src="/astro-launch-ui/statistic.png" 
+    src="/statistic.png" 
     alt="Volco Stats Page"
     maxWidthClass="max-w-xs sm:max-w-sm md:max-w-md"
     objectFitClass="object-contain"

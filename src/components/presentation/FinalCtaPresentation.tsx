@@ -27,7 +27,7 @@ export function FinalCtaPresentation() {
               className="w-auto h-auto focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-700 rounded-lg transition-transform hover:scale-105"
             >
               <img 
-                src="/astro-launch-ui/download_on_the_app_store.svg" 
+                src="/download_on_the_app_store.svg" 
                 alt="Download on the App Store"
                 className="h-10 sm:h-12" // Adjusted height
               /> 
@@ -39,7 +39,7 @@ export function FinalCtaPresentation() {
               className="w-auto h-auto focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-700 rounded-lg transition-transform hover:scale-105"
             >
               <img 
-                src="/astro-launch-ui/get_it_on_google_play.svg" 
+                src="/get_it_on_google_play.svg" 
                 alt="Get on Google Play"
                 className="h-10 sm:h-12" // Adjusted height
               /> 

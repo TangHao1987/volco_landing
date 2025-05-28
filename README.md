@@ -1,6 +1,6 @@
 # Welcome to [Astro Launch UI](https://www.creative-tim.com/astro/launch-ui/)
 
-![version](https://img.shields.io/badge/version-1.0.1-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/astro-launch-ui.svg?maxAge=2592000)](https://github.com/creativetimofficial/astro-launch-ui/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/astro-launch-ui.svg?maxAge=2592000)](https://github.com/creativetimofficial/astro-launch-ui/issues?q=is%3Aissue+is%3Aclosed)
+![version](https://img.shields.io/badge/version-1.0.1-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/astro-launch-ui.svg?maxAge=2592000)](https://github.com/creativetimofficial/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/astro-launch-ui.svg?maxAge=2592000)](https://github.com/creativetimofficial/issues?q=is%3Aissue+is%3Aclosed)
 
 ![basics](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/astro/astrolaunch-ui-free.jpg)
 
@@ -17,9 +17,9 @@ Build your startup website quickly and efficiently with:
 
 **Example Pages**
 We created a set of pre-built pages to help you get inspired or show something to your clients. See them below:
-- [Landing Page](https://demos.creative-tim.com/astro-launch-ui/landing/): Designed to introduce the website's purpose and encourage the user to take an action.
-- [Product Page](https://demos.creative-tim.com/astro-launch-ui/product/): It's designed to give the user all the information they need to make a purchase decision
-- [Shopping Page](https://demos.creative-tim.com/astro-launch-ui/shopping-cart/): Includes a summary of the items in the cart and a form for billing and shipping information.
+- [Landing Page](https://demos.creative-tim.com/landing/): Designed to introduce the website's purpose and encourage the user to take an action.
+- [Product Page](https://demos.creative-tim.com/product/): It's designed to give the user all the information they need to make a purchase decision
+- [Shopping Page](https://demos.creative-tim.com/shopping-cart/): Includes a summary of the items in the cart and a form for billing and shipping information.
 - more+
 
 Astro LaunchUI has everything you need to create the startup website of your dreams.
