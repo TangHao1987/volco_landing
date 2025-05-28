@@ -98,7 +98,6 @@ const howItWorksGridItems = STATUS_ITEMS_DATA.map((item, index) => (
       <Typography className="text-slate-700 text-sm mb-4 flex-grow">
         {item.description}
       </Typography>
-      {item.imgSrc && <img src={item.imgSrc} alt={item.imgAlt} className="mx-auto mt-auto rounded-full w-20 h-20"/>}
     </CardBody>
   </Card>
 ));
