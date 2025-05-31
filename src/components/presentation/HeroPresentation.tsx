@@ -8,7 +8,7 @@ import TextAndImageSection from "./TextAndImageSection";
 // New component for the action buttons
 const HeroActions = () => (
   // Adjusted styling for spacing and responsiveness
-  <div className="mb-12 flex flex-col sm:flex-row gap-4 sm:gap-6">
+  <div className="mb-12 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
     <a 
       href="#" // Placeholder link
       target="_blank" 

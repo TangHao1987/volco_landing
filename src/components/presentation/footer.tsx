@@ -15,6 +15,24 @@ export function FooterPresentation() {
           <Typography variant="small" className="mt-2">
             Master your vocabulary, build lasting knowledge.
           </Typography>
+          <div className="mt-4">
+            <Typography
+              as="a"
+              href="/privacy-policy"
+              variant="small"
+              className="text-slate-400 hover:text-slate-300 transition-colors mx-2"
+            >
+              Privacy Policy
+            </Typography>
+            <Typography
+              as="a"
+              href="/terms-of-use"
+              variant="small"
+              className="text-slate-400 hover:text-slate-300 transition-colors mx-2"
+            >
+              Terms of Use
+            </Typography>
+          </div>
         </div>
       </footer>
     </ThemeProvider>
