@@ -53,14 +53,14 @@ const EngagingQuizzesImages = () => (
 );
 
 // Image component for "Learn Anywhere, Anytime"
-const LearnAnywhereImage = () => (
+const HomeImage = () => (
   <ImageWidget 
-    src="/example_typingquiz.png" 
-    alt="Volco Quiz in Offline Mode - Typing Quiz"
+    src="/home.png" 
+    alt="Volco Main Dashboard UI" 
     maxWidthClass="max-w-xs sm:max-w-sm md:max-w-md"
-    objectFitClass="object-contain"
   />
-);
+)
+
 
 // Image component for "Stats Tracking"
 const StatsTrackingImage = () => (
@@ -137,7 +137,7 @@ export function FeaturesPresentation() {
       <TextAndImageSection 
         title="Learn Anywhere, Anytime – Your Progress is Always Safe."
         description="Volco works seamlessly without an internet connection, perfect for commutes or travel. Plus, your vocabulary and progress are securely backed up to the cloud."
-        imageComponent={<LearnAnywhereImage />}
+        imageComponent={<HomeImage />}
         layoutStyle="side-by-side"
         textOrder="image-first"
         bgColor="bg-[#42A5F520]"

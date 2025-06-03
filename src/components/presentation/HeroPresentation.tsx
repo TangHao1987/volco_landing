@@ -2,13 +2,12 @@ import React from "react";
 // Button is no longer imported from @material-tailwind/react for HeroActions
 import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
-import ImageWidget from "./ImageWidget";
 import TextAndImageSection from "./TextAndImageSection";
 
 // New component for the action buttons
 const HeroActions = () => (
   // Adjusted styling for spacing and responsiveness
-  <div className="mb-12 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+  <div className="mb-12 flex flex-col items-center sm:flex-row gap-4 sm:gap-6 sm:justify-center md:justify-center">
     <a 
       href="#" // Placeholder link
       target="_blank" 
@@ -38,11 +37,18 @@ const HeroActions = () => (
 
 // New component for the Hero Image
 const HeroImage = () => (
-  <ImageWidget 
-    src="/home.png" 
-    alt="Volco Main Dashboard UI" 
-    maxWidthClass="max-w-xs sm:max-w-sm md:max-w-md"
-  />
+  <div className="flex justify-center"> {/* Added a container for centering and applying max-width */}
+    <video 
+      src="/video/Volco.mp4" 
+      className="max-w-[22rem] sm:max-w-[10rem] md:max-w-[17rem] rounded-lg shadow-xl" // Reused maxWidthClass and added some styling
+      autoPlay 
+      loop 
+      muted 
+      playsInline // Important for iOS autoplay
+    >
+      Your browser does not support the video tag.
+    </video>
+  </div>
 );
 
 export function HeroPresentation() {
