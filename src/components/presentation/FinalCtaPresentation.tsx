@@ -13,7 +13,7 @@ export function FinalCtaPresentation() {
 
   return (
     <ThemeProvider>
-      <section id="final-cta" className="py-10 md:py-24 bg-gradient-to-br from-[#42A5F566] to-[#AB47BC66]">
+      <section id="final-cta" className="py-10 md:py-24 bg-gradient-to-br from-blue-100 via-purple-50 to-indigo-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Typography variant="h2" className="text-3xl sm:text-4xl font-bold mb-6">
             Start Your Journey to Vocabulary Mastery Today.

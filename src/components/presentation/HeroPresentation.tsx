@@ -40,7 +40,7 @@ const HeroImage = () => (
   <div className="flex justify-center"> {/* Added a container for centering and applying max-width */}
     <video 
       src="/video/Volco.mp4" 
-      className="max-w-[22rem] sm:max-w-[10rem] md:max-w-[17rem] rounded-lg shadow-xl" // Reused maxWidthClass and added some styling
+      className="max-w-[16rem] sm:max-w-[18rem] md:max-w-[20rem] lg:max-w-[22rem] rounded-lg shadow-xl" // Better responsive sizing progression
       autoPlay 
       loop 
       muted 
@@ -61,7 +61,7 @@ export function HeroPresentation() {
         actionsComponent={<HeroActions />}
         imageComponent={<HeroImage />}
         layoutStyle="side-by-side"
-        bgColor="bg-gradient-to-br from-[#42A5F566] to-[#AB47BC66]"
+        bgColor="bg-gradient-to-br from-blue-100 via-purple-50 to-indigo-100"
       />
     </ThemeProvider>
   );

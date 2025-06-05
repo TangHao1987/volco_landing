@@ -7,7 +7,7 @@ const ForgettingCurveImage = ({ maxHeightClass }: { maxHeightClass?: string }) =
   <ImageWidget 
     src="/forgetting-curve.png"
     alt="Ebbinghaus Forgetting Curve" 
-    maxWidthClass="max-w-lg" // Adjust as needed, e.g., max-w-md, max-w-lg
+    maxWidthClass="max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl" // Responsive sizing
     maxHeightClass={maxHeightClass} // Will be overridden by TextAndImageSection in stacked layout
     objectFitClass="object-contain"
   />
