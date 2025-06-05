@@ -23,7 +23,7 @@ export function FinalCtaPresentation() {
           </Typography>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
             <a 
-              href="#" // Placeholder link
+              href="https://apps.apple.com/us/app/volco-srs-learn-english-word/id6745894948" // Placeholder link
               target="_blank" 
               rel="noopener noreferrer"
               className="w-auto h-auto focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-700 rounded-lg transition-transform hover:scale-105"
@@ -35,10 +35,10 @@ export function FinalCtaPresentation() {
               /> 
             </a>
             <a 
-              href="#" // Placeholder link
+              href="#"
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-auto h-auto focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-700 rounded-lg transition-transform hover:scale-105"
+              className="hidden w-auto h-auto focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-700 rounded-lg transition-transform hover:scale-105"
             >
               <img 
                 src="/get_it_on_google_play.svg" 
