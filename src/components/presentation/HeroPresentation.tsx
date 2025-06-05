@@ -9,7 +9,7 @@ const HeroActions = () => (
   // Adjusted styling for spacing and responsiveness
   <div className="mb-12 flex flex-col items-center sm:flex-row gap-4 sm:gap-6 sm:justify-center md:justify-center">
     <a 
-      href="https://apps.apple.com/us/app/volco-srs-learn-english-word/id6745894948" // Placeholder link
+      href="https://apps.apple.com/sg/app/volco-srs-learn-english-word/id6745894948" // Placeholder link
       target="_blank" 
       rel="noopener noreferrer"
       className="w-auto h-auto focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800 rounded-lg transition-transform hover:scale-105"
