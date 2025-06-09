@@ -7,8 +7,8 @@ import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 // New component for the action buttons
 const HeroActions = ({ t }: { t: any }) => (
-  // Adjusted styling for spacing and responsiveness
-  <div className="mb-12 flex flex-col items-center sm:flex-row gap-4 sm:gap-6 sm:justify-center md:justify-center">
+  // Adjusted styling for spacing and responsiveness - left-aligned on large screens, centered on mobile
+  <div className="mb-12 flex flex-col items-center sm:flex-row gap-4 sm:gap-6 sm:justify-center lg:justify-start">
     <a 
       href="https://apps.apple.com/sg/app/volco-srs-learn-english-word/id6745894948" // Placeholder link
       target="_blank" 
