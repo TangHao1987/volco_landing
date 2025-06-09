@@ -1,0 +1,1 @@
+import{j as r}from"./theme-provider.CXI2vxH0.js";import"./index.x5KWUyJd.js";function u({src:s,alt:a,maxWidthClass:t="max-w-full",maxHeightClass:e="max-h-[75vh]",aspectRatioClass:o,objectFitClass:m="object-contain",additionalClasses:l=""}){const n=`${`rounded-xl mx-auto ${e}`} ${t} ${o||""} ${m} ${l}`.trim();return r.jsx("img",{src:s,alt:a,className:n})}export{u as I};

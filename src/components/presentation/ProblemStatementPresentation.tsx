@@ -1,6 +1,7 @@
 import React from "react";
 import TextAndImageSection from "./TextAndImageSection";
 import ImageWidget from "./ImageWidget";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 interface ProblemImageProps {
   maxHeightClass?: string;
@@ -17,10 +18,14 @@ const ProblemImage = ({ maxHeightClass }: ProblemImageProps) => (
 );
 
 export function ProblemStatementPresentation() {
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://volcosrs.com';
+  const currentLang = getLangFromUrl(new URL(currentUrl));
+  const t = useTranslations(currentLang);
+
   return (
     <TextAndImageSection 
-      title="Tired of Forgetting New Words?"
-      description="Traditional learning methods often lead to quick forgetting. Volco is engineered to change that, using a smarter approach to help you truly master vocabulary."
+      title={t('problem.title')}
+      description={t('problem.description')}
       imageComponent={<ProblemImage />}
       bgColor="bg-[#42A5F520]"
       textOrder="image-first"

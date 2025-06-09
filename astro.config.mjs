@@ -9,4 +9,11 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [react(), tailwind()],
   site: "https://volcosrs.com",
+  i18n: {
+    locales: ["en", "zh"],
+    defaultLocale: "en",
+    routing: {
+      prefixDefaultLocale: false, // English won't have /en/ prefix
+    }
+  }
 });

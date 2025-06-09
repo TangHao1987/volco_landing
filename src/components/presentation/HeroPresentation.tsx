@@ -3,9 +3,10 @@ import React from "react";
 import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
 import TextAndImageSection from "./TextAndImageSection";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 // New component for the action buttons
-const HeroActions = () => (
+const HeroActions = ({ t }: { t: any }) => (
   // Adjusted styling for spacing and responsiveness
   <div className="mb-12 flex flex-col items-center sm:flex-row gap-4 sm:gap-6 sm:justify-center md:justify-center">
     <a 
@@ -16,7 +17,7 @@ const HeroActions = () => (
     >
       <img 
         src="/download_on_the_app_store.svg" 
-        alt="Download on the App Store"
+        alt={t('hero.app_store_alt')}
         className="h-10 sm:h-12" // Adjusted height, width will scale proportionally
       /> 
     </a>
@@ -28,7 +29,7 @@ const HeroActions = () => (
     >
       <img 
         src="/get_it_on_google_play.svg" 
-        alt="Get on Google Play"
+        alt={t('hero.google_play_alt')}
         className="h-10 sm:h-12" // Adjusted height
       /> 
     </a>
@@ -52,13 +53,37 @@ const HeroImage = () => (
 );
 
 export function HeroPresentation() {
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://volcosrs.com';
+  const currentLang = getLangFromUrl(new URL(currentUrl));
+  const t = useTranslations(currentLang);
+
+  // Function to render title with styled Volco placeholder
+  const renderTitle = () => {
+    const titleText = t('hero.title');
+    const parts = titleText.split('Volco');
+    
+    if (parts.length === 2) {
+      // Volco appears in the middle
+      return (
+        <>
+          {parts[0]}
+          <span className="text-indigo-600">Volco</span>
+          {parts[1]}
+        </>
+      );
+    } else {
+      // Fallback: just return the text as is
+      return titleText;
+    }
+  };
+
   return (
     <ThemeProvider>
       <TextAndImageSection
         id="hero"
-        title={<>Master Vocabulary for Life with <span className="text-indigo-600">Volco</span>.</>}
-        description="The intelligent app that uses science to build your long-term memory for words."
-        actionsComponent={<HeroActions />}
+        title={renderTitle()}
+        description={t('hero.description')}
+        actionsComponent={<HeroActions t={t} />}
         imageComponent={<HeroImage />}
         layoutStyle="side-by-side"
         bgColor="bg-gradient-to-br from-blue-100 via-purple-50 to-indigo-100"

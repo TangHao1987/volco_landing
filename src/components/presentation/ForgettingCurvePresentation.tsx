@@ -2,11 +2,12 @@ import React from "react";
 import TextAndImageSection from "./TextAndImageSection";
 import ImageWidget from "./ImageWidget";
 import ThemeProvider from "../theme-provider";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
-const ForgettingCurveImage = ({ maxHeightClass }: { maxHeightClass?: string }) => (
+const ForgettingCurveImage = ({ maxHeightClass, t }: { maxHeightClass?: string; t?: any }) => (
   <ImageWidget 
     src="/forgetting-curve.png"
-    alt="Ebbinghaus Forgetting Curve" 
+    alt={t ? t('forgetting_curve.image_alt') : "Ebbinghaus Forgetting Curve"} 
     maxWidthClass="max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl" // Responsive sizing
     maxHeightClass={maxHeightClass} // Will be overridden by TextAndImageSection in stacked layout
     objectFitClass="object-contain"
@@ -14,13 +15,17 @@ const ForgettingCurveImage = ({ maxHeightClass }: { maxHeightClass?: string }) =
 );
 
 export function ForgettingCurvePresentation() {
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://volcosrs.com';
+  const currentLang = getLangFromUrl(new URL(currentUrl));
+  const t = useTranslations(currentLang);
+
   return (
     <ThemeProvider>
       <TextAndImageSection 
         id="forgetting-curve"
-        title="Why We Forget: The Science of the Forgetting Curve"
-        description="Ever wondered why newly learned information fades so quickly? The Ebbinghaus forgetting curve illustrates how memory retention declines over time unless we actively reinforce it. Volco is designed to combat this natural process."
-        imageComponent={<ForgettingCurveImage />}
+        title={t('forgetting_curve.title')}
+        description={t('forgetting_curve.description')}
+        imageComponent={<ForgettingCurveImage t={t} />}
         layoutStyle="stacked-text-top"
         bgColor="bg-slate-50" // Light background for contrast
       />

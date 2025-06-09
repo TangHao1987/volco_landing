@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeaderPresentation from "../../components/presentation/header";
+import HeroPresentation from "../../components/presentation/HeroPresentation";
+import ForgettingCurvePresentation from "../../components/presentation/ForgettingCurvePresentation";
+import ProblemStatementPresentation from "../../components/presentation/ProblemStatementPresentation";
+import FeaturesPresentation from "../../components/presentation/feature";
+import FinalCtaPresentation from "../../components/presentation/FinalCtaPresentation";
+// import FooterPresentation from "../../components/presentation/footer"; // Removed
+
+---
+
+<Layout title="Volco - 与终身掌握词汇">
+	<main>
+    <HeaderPresentation client:only="react" />
+    <HeroPresentation client:only="react" />
+    <ForgettingCurvePresentation client:only="react" />
+    <ProblemStatementPresentation client:only="react" />
+    <FeaturesPresentation client:only="react" />
+    <FinalCtaPresentation client:only="react" />
+  </main>
+  {/* <FooterPresentation client:only="react" /> */}
+</Layout> 

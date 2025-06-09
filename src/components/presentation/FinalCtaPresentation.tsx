@@ -5,21 +5,25 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 // Removed PaddleLoader and its useEffect hook
 
 export function FinalCtaPresentation() {
   const year = new Date().getFullYear(); // Added from footer
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://volcosrs.com';
+  const currentLang = getLangFromUrl(new URL(currentUrl));
+  const t = useTranslations(currentLang);
 
   return (
     <ThemeProvider>
       <section id="final-cta" className="py-10 md:py-24 bg-gradient-to-br from-blue-100 via-purple-50 to-indigo-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Typography variant="h2" className="text-3xl sm:text-4xl font-bold mb-6">
-            Start Your Journey to Vocabulary Mastery Today.
+            {t('final_cta.title')}
           </Typography>
           <Typography className="text-lg sm:text-xl mb-10 max-w-2xl mx-auto text-slate-100">
-            Join thousands of learners who are already building their vocabulary for life with Volco's intelligent and effective system.
+            {t('final_cta.description')}
           </Typography>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
             <a 
@@ -30,7 +34,7 @@ export function FinalCtaPresentation() {
             >
               <img 
                 src="/download_on_the_app_store.svg" 
-                alt="Download on the App Store"
+                alt={t('hero.app_store_alt')}
                 className="h-10 sm:h-12" // Adjusted height
               /> 
             </a>
@@ -42,7 +46,7 @@ export function FinalCtaPresentation() {
             >
               <img 
                 src="/get_it_on_google_play.svg" 
-                alt="Get on Google Play"
+                alt={t('hero.google_play_alt')}
                 className="h-10 sm:h-12" // Adjusted height
               /> 
             </a>
@@ -51,7 +55,7 @@ export function FinalCtaPresentation() {
           {/* Footer Content Merged Below */}
           <div className="mt-16 pt-2">
             <Typography variant="paragraph" className="mb-0 text-slate-200">
-              &copy; {year} Volco. All rights reserved.
+              &copy; {year} {t('footer.copyright')}
             </Typography>
             <div className="flex flex-row justify-center items-center gap-4 mt-4">
               <Typography
@@ -60,7 +64,7 @@ export function FinalCtaPresentation() {
                 variant="small"
                 className="text-slate-300 hover:text-white transition-colors mx-2"
               >
-                Privacy Policy
+                {t('footer.privacy')}
               </Typography>
               <Typography
                 as="a"
@@ -68,7 +72,7 @@ export function FinalCtaPresentation() {
                 variant="small"
                 className="text-slate-300 hover:text-white transition-colors mx-2"
               >
-                Terms of Use
+                {t('footer.terms')}
               </Typography>
             </div>
           </div>

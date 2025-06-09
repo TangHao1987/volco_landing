@@ -5,16 +5,22 @@ import {
   Button,
 } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
-
-// Define the navigation links data
-const NAV_LINKS = [
-  { label: "Why Volco?", href: "#forgetting-curve" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Features", href: "#features" },
-  { label: "Progress", href: "#stats" },
-];
+import { LanguageSwitcher } from "../LanguageSwitcher";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 export function HeaderPresentation() {
+  // Get current language from URL - this will be passed as a prop in the updated version
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://volcosrs.com';
+  const currentLang = getLangFromUrl(new URL(currentUrl));
+  const t = useTranslations(currentLang);
+
+  // Define the navigation links data with translations
+  const NAV_LINKS = [
+    { label: t('nav.why_volco'), href: "#forgetting-curve" },
+    { label: t('nav.how_it_works'), href: "#how-it-works" },
+    { label: t('nav.features'), href: "#features" },
+    { label: t('nav.progress'), href: "#stats" },
+  ];
   const [open, setOpen] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
 
@@ -64,7 +70,7 @@ export function HeaderPresentation() {
                 className="font-bold text-indigo-600 cursor-pointer"
                 onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleNavClick(e, "#hero")}
               >
-                Volco
+                {t('nav.brand')}
               </Typography>
             </div>
             <div className="hidden lg:flex lg:items-center lg:ml-6">
@@ -80,6 +86,7 @@ export function HeaderPresentation() {
                   {link.label}
                 </Typography>
               ))}
+              <LanguageSwitcher currentUrl={currentUrl} currentLang={currentLang} />
               <Button 
                 variant="filled" 
                 size="sm"
@@ -91,7 +98,7 @@ export function HeaderPresentation() {
                   }
                 }}
               >
-                Download
+                {t('nav.download')}
               </Button>
             </div>
             <div className="lg:hidden">
@@ -128,6 +135,9 @@ export function HeaderPresentation() {
                 {link.label}
               </Typography>
             ))}
+            <div className="px-3 py-2">
+              <LanguageSwitcher currentUrl={currentUrl} currentLang={currentLang} />
+            </div>
             <Button 
               fullWidth
               variant="filled"
@@ -141,7 +151,7 @@ export function HeaderPresentation() {
                   toggleOpen(); 
                 }}
             >
-              Download
+              {t('nav.download')}
             </Button>
           </div>
         </div>
